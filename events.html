@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/responsive_navbar.js"></script>
+      
+      <title>Events</title>
+      <style>
+
+          body, html {
+            height: 100%;
+          }
+          body{
+            font-family: Arial;
+          }
+
+          body {
+            background-color: rgb(249,249,249);
+          }
+
+            *{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+
+            }
+
+            header{
+                width: 100%;
+                position: fixed;
+                z-index: 50;
+            }
+
+            nav{
+                height: 50px;
+                margin-top: -10px;
+
+                background: #191919;
+                
+                width: 100%;
+
+                border-bottom: solid;
+                border-color: #ff7b0f;
+                border-width: 2px;
+            }
+
+            .logo-section{
+                float: left;
+                padding: 13px;
+                padding-bottom: 5px;
+               
+            }
+            .itslogo{
+             
+            }
+
+            .hb-button{
+                float: right;
+                background: #222;
+                color:  white;
+                border: none;
+                font-size: 13px;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                display: none;
+                margin-top: 3px;
+            }
+
+            nav a{
+                text-decoration: none;
+                color: #29954;
+                font-size: 13.5px;
+                
+            }
+
+            nav ul{
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                transition: max-height 0.5s;
+                -webkit-transition: max-height 0.5s;
+                -moz-transition: max-height 0.5s;
+                -ms-transition: max-height 0.5s;
+                -o-transition: max-height 0.5s;
+            }
+
+            nav ul li{
+                float: right;
+                display: inline-block;
+                
+                padding: 20px;
+            }
+
+            li > a{
+                position: relative;
+                color: white;
+                text-decoration: none;
+                
+            }
+
+            li > a:hover{
+                color: #229954;
+            }
+
+            
+
+            @media screen and (max-width: 830px){
+                .logo-section{
+                    float:none;
+                }
+                .itslogo{
+                
+                  float: left;
+
+                }
+                nav ul{
+                    background: rgb(38, 38, 38);
+                    max-height: 0;
+                    width: 100%;
+                }
+                nav ul.show{
+                    max-height: 20em;
+                }
+                nav ul li{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 15px;
+                }
+                .hb-button{
+                    display: inline;
+                }
+            }
+          
+         
+
+          
+
+          #evetitle{
+            text-align: center;
+            color: darkorange;
+            font-weight: normal;
+            font-family: Arial;
+            
+          }
+          #eveline{
+
+          }
+
+         
+
+         
+           
+          
+
+
+          .coffeechat{
+           margin-top: -22px;
+           background-color: rgb(28, 28, 28);
+            
+          }
+          
+      
+        
+
+          
+          #demo {
+
+            color: darkorange;
+            
+            text-align: center;
+            font-size: 60px;
+            margin-top:0px;
+          }
+
+        #until{
+          margin-top: -5px;
+          text-align: center;
+          color: white;
+          font-weight: bold;
+          font-family: Arial;
+        }
+
+        .pic{
+          text-align: center;
+        }
+
+        #coffeepic{
+          width: 60%;
+          
+        }
+        #casecomp{
+          width: 60%;
+        }
+
+          .footerbox{
+              
+              clear:both;
+             
+              
+              background-color: black;
+              text-align: center;
+          }
+
+          .social{
+            position: relative;
+            top: 10px;
+            display: inline;
+            margin-right: 10px;
+            color: white;
+          }
+          .social:hover{
+            opacity: 0.7;
+          }
+          
+          #attribution{
+            padding-top: 10px;
+            font-size: 8px;
+            color: gray;
+          }
+
+
+         
+    </style>
+</head>
+
+<body>
+
+      
+      <header>
+        <nav>
+            <div class="logo-section">
+                <a class="itslogo" href="index.html"><img src="itslclogo2.png"></a>
+                <button class="hb-button"><i class="fa fa-bars"></i></button>
+            </div>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="events.html" style="color:#e06914">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#aul" >About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+      </header>
+
+  <br>
+  <br>
+  
+  <div class="coffeechat">
+  <br>
+  <h1 id="evetitle"> Event List </h1>
+  <hr id="eveline">
+  </div>
+
+   <div class="coffeechat">  
+
+      <div class="pic">
+        <img id="casecomp" src="flyerfinalpwc.png">
+    </div>
+    <br>
+  </div>
+  <div class="coffeechat">  
+
+      <p id="demo"></p>
+      <h2 id="until">Until Next Coffee Chat</h2>
+      
+    
+      
+      <div class="pic">
+        <img id="coffeepic" src="ccanva.png">
+      </div>
+  </div>
+
+  
+
+<footer>
+    <div class="footerbox">
+      <ul>
+        <a href="https://www.facebook.com/itslc.utd/">
+        <li class="social"><img src="facebook.png"></li>
+        </a>
+        <a href="https://www.youtube.com/channel/UCoUw4cCn3EFg2RIQKJt8aSA">
+        <li class="social"><img src="youtube.png"></li>
+        </a>
+        <a href="https://twitter.com/jindal_utdallas">
+        <li class="social"><img src="twitter.png"></li>
+        </a>
+      </ul>
+      <p id="attribution">Icon made by Freepik from www.flaticon.com </p>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- script -->
+  <script type="text/javascript">
+  // Set the date we're counting down to
+    var countDownDate = new Date("Nov 30, 2018 9:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Next chat on November 29";
+        }
+    }, 1000);</script>
+  
+ 
+</body>
+</html>
+  

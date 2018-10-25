@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/responsive_navbar.js"></script>
+      
+      <title>ITS Leadership Council</title>
+      <style>
+
+          body, html {
+            height: 100%;
+          }
+          body{
+            font-family: Arial;
+          }
+
+          body {
+            background-color: rgb(249,249,249);
+          }
+
+            *{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+
+            }
+
+            header{
+                width: 100%;
+                position: fixed;
+                z-index: 50;
+            }
+
+            nav{
+                height: 50px;
+                margin-top: -10px;
+
+                background: #191919;
+                
+                width: 100%;
+                border-bottom: solid;
+                border-color: #ff7b0f;
+                border-width: 2px;
+            }
+
+            .logo-section{
+                float: left;
+                padding: 13px;
+                padding-bottom: 5px;
+               
+            }
+
+            .hb-button{
+                float: right;
+                background: #222;
+                color:  white;
+                border: none;
+                font-size: 13px;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                display: none;
+                margin-top: 3px;
+            }
+
+            nav a{
+                text-decoration: none;
+                color: #29954;
+                font-size: 13.5px;
+                
+            }
+
+            nav ul{
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                transition: max-height 0.5s;
+                -webkit-transition: max-height 0.5s;
+                -moz-transition: max-height 0.5s;
+                -ms-transition: max-height 0.5s;
+                -o-transition: max-height 0.5s;
+            }
+
+            nav ul li{
+                float: right;
+                display: inline-block;
+                
+                padding: 20px;
+            }
+
+            li > a{
+                position: relative;
+                color: white;
+                text-decoration: none;
+                
+            }
+
+            li > a:hover{
+                color: #229954;
+            }
+
+            
+
+            @media screen and (max-width: 830px){
+                .logo-section{
+                    float: none;
+                }
+                nav ul{
+                    background: rgb(38, 38, 38);
+                    max-height: 0;
+                    width: 100%;
+                }
+                nav ul.show{
+                    max-height: 20em;
+                }
+                nav ul li{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 15px;
+                }
+                .hb-button{
+                    display: inline;
+                }
+            }
+
+
+
+          .mySlides {
+            display: none;
+            }
+
+
+          .holder{
+
+            
+            
+          }
+          
+
+          .midabout{
+            
+            text-align: center;
+            background-color: rgb(28, 28, 28);
+            color: white;
+            padding-bottom: 20px;
+            
+            
+          }
+
+          h2{
+            color: darkorange;
+            font-family: Arial;
+          }
+
+          .aboutustitle{
+            margin-top: 200px;
+          }
+
+          #aboutuspara{
+            max-width: 800px;
+            margin: 0 auto; 
+            
+          }
+
+           #membersf1{
+            border-radius: 36px;
+            font-family: Arial;
+            color: white;
+            background-color: #229954;
+            border: none;
+            
+            padding: 15px 32px;
+            
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+
+          }
+
+          #membersf1:hover{
+            color:darkorange;
+            background-color: white;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+          #membersf2{
+            position: relative;
+            top: 20px;
+            padding-left: 40px;
+            
+          }
+          
+        
+
+          .midsection{
+            width: 1250px;
+            margin: 0 auto;
+            padding-top: 30px;
+
+
+          }
+
+
+          .itsprog{
+            float:left;
+            text-align: center;
+            width: 50%;
+            margin-top: 20px;
+            
+           
+
+          }
+
+          @media screen and (max-width: 650px) {
+                  .itsprog {
+                  width: 100%;
+                  display: block;
+              }
+          }
+
+       
+          #resourcespic{
+             max-height: 70%;
+            max-width: 70%;
+      
+          }
+          
+
+          .f1name{
+            color: darkorange;
+
+          }
+
+
+          .f1para{
+
+            padding: 0px 40px 20px 40px;
+
+          }
+
+          #otherorg{
+            max-height: 70%;
+            max-width: 70%;
+          }
+          
+          
+          .readm{
+            color: #229954;
+            text-decoration: underline;
+
+          }
+          .readm:hover{
+            color:black;
+          }
+
+          .footerbox{
+              clear: both;
+              margin-top: 125px;
+              
+              
+              background-color: black;
+              text-align: center;
+          }
+
+
+          .social{
+            position: relative;
+            top: 10px;
+            display: inline;
+            margin-right: 10px;
+            color: white;
+          }
+          .social:hover{
+            opacity: 0.7;
+          }
+
+          #attribution{
+            padding-top: 10px;
+            font-size: 8px;
+            color: gray;
+          }
+
+
+         
+
+         
+    </style>
+</head>
+
+<body>
+
+      <header>
+        <nav>
+            <div class="logo-section">
+                <a class="logo" href="index.html"><img src="itslclogo2.png"></a>
+                <button class="hb-button"><i class="fa fa-bars"></i></button>
+            </div>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#aul">About Us</a></li>
+                <li><a href="index.html"style="color:#e06914">Home</a></li>
+            </ul>
+        </nav>
+      </header>
+  
+  <div class="holder">
+    <img class="mySlides" src="slidetest.jpg" style="width:100%">
+    <img class="mySlides" src="slidetest2.jpg" style="width:100%">
+    <img class="mySlides" src="slidetest3.jpg" style="width:100%">
+  </div>
+
+  <div id="aul"></div>
+
+
+  <div class="midabout" >
+    <br/>
+
+    <h2 id="aboutustitle">About Us</h2>
+    <p id="aboutuspara">
+      The Information Technology and Systems Leadership Council (ITSLC) aims to provide opportunities for students in the ITS program at the University of Texas at Dallas. From creating networking events to case competitions, the council puts a spotlight on the growing IT industry and its various concentrations. Additionally, the council assists the Information Systems Director, Dawn Owens, in bringing exposure to the university’s ITS program. We are comprised of ITS students who have a passion for leadership and value the impact of IT in today’s society. 
+    </p>
+    <br/>
+      <div class="membersec">
+
+        <a href="memberspage.html" id="membersf1"> Meet the Leaders</a>
+        <img src="members.png" id="membersf2">
+      </div>
+  </div>
+
+
+  <div class ="itsprog">
+      <img id="resourcespic" src="jsom2.png">
+      <h3 class="f1name"> The ITS Program </h3>
+      <p class="f1para">For more information and access to resources on the Information Technology and Systems program at UT Dallas. <a class="readm" href="http://jindal.utdallas.edu/isom/information-systems-programs/bs-its/"><u>Read More</u></a></p>
+  </div>
+    
+  <div class="itsprog">
+      <img id="otherorg" src="org2.png">
+      <h3 class="f1name"> Other ITS Organizations</h3>
+      <p class="f1para">Learn more about organizations related to ITS. <a class="readm" href="https://jindal.utdallas.edu/student-resources/student-organizations/#itm"><u>Read More</u></a>
+  </div>
+ 
+
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <footer>
+    <div class="footerbox">
+      <ul>
+        <a href="https://www.facebook.com/itslc.utd/">
+        <li class="social"><img src="facebook.png"></li>
+        </a>
+        <a href="https://www.youtube.com/channel/UCoUw4cCn3EFg2RIQKJt8aSA">
+        <li class="social"><img src="youtube.png"></li>
+        </a>
+        <a href="https://twitter.com/jindal_utdallas">
+        <li class="social"><img src="twitter.png"></li>
+        </a>
+      </ul>
+      <p id="attribution">Icon made by Freepik from www.flaticon.com </p>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- script -->
+ 
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+
+  </script>
+ 
+</body>
+</html>
+  

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/responsive_navbar.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+      
+      <title>Projects</title>
+      <style>
+
+          body, html {
+            height: 100%;
+          }
+          body{
+            font-family: Arial;
+          }
+
+          body {
+            background-color: rgb(249,249,249);
+          }
+
+            *{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+
+            }
+
+            header{
+                width: 100%;
+                position: fixed;
+                z-index: 50;
+            }
+
+            nav{
+                height: 50px;
+                margin-top: -10px;
+
+                background: #191919;
+                
+                width: 100%;
+
+                border-bottom: solid;
+                border-color: #ff7b0f;
+                border-width: 2px;
+            }
+
+            .logo-section{
+                float: left;
+                padding: 13px;
+                padding-bottom: 5px;
+               
+            }
+            .itslogo{
+             
+            }
+
+            .hb-button{
+                float: right;
+                background: #222;
+                color:  white;
+                border: none;
+                font-size: 13px;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                display: none;
+                margin-top: 3px;
+            }
+
+            nav a{
+                text-decoration: none;
+                color: #29954;
+                font-size: 13.5px;
+                
+            }
+
+            nav ul{
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                transition: max-height 0.5s;
+                -webkit-transition: max-height 0.5s;
+                -moz-transition: max-height 0.5s;
+                -ms-transition: max-height 0.5s;
+                -o-transition: max-height 0.5s;
+            }
+
+            nav ul li{
+                float: right;
+                display: inline-block;
+                
+                padding: 20px;
+            }
+
+            li > a{
+                position: relative;
+                color: white;
+                text-decoration: none;
+                
+            }
+
+            li > a:hover{
+                color: #229954;
+            }
+
+            
+
+            @media screen and (max-width: 830px){
+                .logo-section{
+                    float:none;
+                }
+                .itslogo{
+                
+                  float: left;
+
+                }
+                nav ul{
+                    background: rgb(38, 38, 38);
+                    max-height: 0;
+                    width: 100%;
+                }
+                nav ul.show{
+                    max-height: 20em;
+                }
+                nav ul li{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 15px;
+                }
+                .hb-button{
+                    display: inline;
+                }
+            }
+          
+         
+        
+
+         .picture{
+          text-align: center;
+          margin-top: -20px;
+         }
+
+         #banner{
+          width: 100%;
+         }
+         #overview{
+          width: 100%;
+         }
+
+         #faq{
+          width: 100%;
+         }
+
+         
+
+          .googleform{
+            text-align: center;
+          }
+         
+          #title{
+            text-align: center;
+          }
+
+                    /* Style inputs, select elements and textareas */
+          input[type=text], select, textarea{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+          }
+
+          /* Style the label to display next to the inputs */
+          label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+          }
+
+          /* Style the submit button */
+          input[type=submit] {
+            background-color: #229954;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+          }
+          input[type=submit]:hover {
+             background-color: #1f844a;
+          }
+
+
+          /* Style the container */
+          .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+          }
+
+          /* Floating column for labels: 25% width */
+          .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+          }
+
+          /* Floating column for inputs: 75% width */
+          .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+          }
+
+          /* Clear floats after the columns */
+          .row:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+
+          /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+          @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+              width: 100%;
+              margin-top: 0;
+            }
+          }
+          
+          
+
+          .footerbox{
+              
+              clear:both;
+          
+              background-color: black;
+              text-align: center;
+          }
+
+          .social{
+            position: relative;
+            top: 10px;
+            display: inline;
+            margin-right: 10px;
+            color: white;
+          }
+          .social:hover{
+            opacity: 0.7;
+          }
+               #attribution{
+            padding-top: 10px;
+            font-size: 8px;
+            color: gray;
+          }
+
+         
+    </style>
+</head>
+
+<body>
+
+      
+      <header>
+        <nav>
+            <div class="logo-section">
+                <a class="itslogo" href="index.html"><img src="itslclogo2.png"></a>
+                <button class="hb-button"><i class="fa fa-bars"></i></button>
+            </div>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html"style="color:#e06914">Projects</a></li>
+                <li><a href="index.html#aul" >About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+      </header>
+
+  <br>
+  <br>
+    
+ 
+  <div class= "picture">
+  <img id="banner" src="pwcbanner.png">
+  <img id="overview" src="overviewfinal.png">
+  <img id="faq" src="faqfinal.png">
+
+  </div>
+  
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfzfH9am06mFjkwdEa1Ncy7_g3R40gfi3glapuLuBrR1FiiMA/formResponse"
+          target="_self"
+          id="bootstrapForm"
+          method="POST">
+        <fieldset id="title">
+            <h2>Have questions regarding the Competition? <br><small></small></h2>
+        </fieldset>
+
+
+        <!-- Field type: "short" id: "1633920210" -->
+        <fieldset>
+            <legend for="1633920210">Name</legend>
+            <div class="form-group">
+                <input id="2005620554" type="text" name="entry.2005620554" class="form-control" required>
+            </div>
+        </fieldset>
+
+
+        <!-- Field type: "short" id: "227649005" -->
+        <fieldset>
+            <legend for="227649005">Email</legend>
+            <div class="form-group">
+                <input id="1045781291" type="text" name="entry.1045781291" class="form-control" required placeholder="Please enter valid email">
+            </div>
+        </fieldset>
+
+
+        <!-- Field type: "paragraph" id: "1846923513" -->
+        <fieldset>
+            <legend for="1846923513">Questions</legend>
+            <div class="form-group">
+                <textarea id="839337160" name="entry.839337160" class="form-control" placeholder="Please enter any questions you have"></textarea>
+            </div>
+        </fieldset>
+
+        <input type="hidden" name="fvv" value="1">
+        <input type="hidden" name="fbzx" value="870797081370189480">
+        <!--
+            CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+            This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+            Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+            We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+        -->
+        <input type="hidden" name="pageHistory" value="0">
+
+        <input class="btn btn-primary" type="submit" value="Submit">
+    </form>
+
+
+
+ <footer>
+    <div class="footerbox">
+      <ul>
+        <a href="https://www.facebook.com/itslc.utd/">
+        <li class="social"><img src="facebook.png"></li>
+        </a>
+        <a href="https://www.youtube.com/channel/UCoUw4cCn3EFg2RIQKJt8aSA">
+        <li class="social"><img src="youtube.png"></li>
+        </a>
+        <a href="https://twitter.com/jindal_utdallas">
+        <li class="social"><img src="twitter.png"></li>
+        </a>
+      </ul>
+      <p id="attribution">Icon made by Freepik from www.flaticon.com </p>
+
+    </div>
+
+  </footer>
+
+    <script type="text/javascript">
+            $('#bootstrapForm').submit(function (event) {
+          event.preventDefault()
+          var extraData = {}
+          $('#bootstrapForm').ajaxSubmit({
+              data: extraData,
+              dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+              error: function () {
+                  // Submit of form should be successful but JSONP callback will fail because Google Forms
+                  // does not support it, so this is handled as a failure.
+                  alert('Form Submitted. Thanks.')
+                  // You can also redirect the user to a custom thank-you page:
+                  window.location = 'index.html'
+              }
+          })
+      })
+    </script>
+  
+ 
+</body>
+</html>
+  

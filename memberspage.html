@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+      <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/responsive_navbar.js"></script>
+      
+      <title>Meet the Leaders</title>
+      <style>
+
+          body, html {
+            height: 100%;
+          }
+          body{
+            font-family: Arial;
+          }
+
+          body {
+            background-color: rgb(249,249,249);
+          }
+
+            *{
+                margin: 0;
+                padding: 0;
+                text-decoration: none;
+
+            }
+
+            header{
+                width: 100%;
+                position: fixed;
+                z-index: 50;
+            }
+
+            nav{
+                height: 50px;
+                margin-top: -10px;
+
+                background: #191919;
+                
+                width: 100%;
+
+                border-bottom: solid;
+                border-color: #ff7b0f;
+                border-width: 2px;
+            }
+
+            .logo-section{
+                float: left;
+                padding: 13px;
+                padding-bottom: 5px;
+               
+            }
+            .itslogo{
+             
+            }
+
+            .hb-button{
+                float: right;
+                background: #222;
+                color:  white;
+                border: none;
+                font-size: 13px;
+                padding: 5px 10px;
+                border-radius: 3px;
+                cursor: pointer;
+                display: none;
+                margin-top: 3px;
+            }
+
+            nav a{
+                text-decoration: none;
+                color: #29954;
+                font-size: 13.5px;
+                
+            }
+
+            nav ul{
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                transition: max-height 0.5s;
+                -webkit-transition: max-height 0.5s;
+                -moz-transition: max-height 0.5s;
+                -ms-transition: max-height 0.5s;
+                -o-transition: max-height 0.5s;
+            }
+
+            nav ul li{
+                float: right;
+                display: inline-block;
+                
+                padding: 20px;
+            }
+
+            li > a{
+                position: relative;
+                color: white;
+                text-decoration: none;
+                
+            }
+
+            li > a:hover{
+                color: #229954;
+            }
+
+            
+
+            @media screen and (max-width: 830px){
+                .logo-section{
+                    float:none;
+                }
+                .itslogo{
+                
+                  float: left;
+
+                }
+                nav ul{
+                    background: rgb(38, 38, 38);
+                    max-height: 0;
+                    width: 100%;
+                }
+                nav ul.show{
+                    max-height: 20em;
+                }
+                nav ul li{
+                    box-sizing: border-box;
+                    width: 100%;
+                    padding: 15px;
+                }
+                .hb-button{
+                    display: inline;
+                }
+            }
+          
+         
+
+          
+
+          #fatitle{
+            text-align: center;
+            color: darkorange;
+            font-weight: normal;
+            font-family: Arial;
+            
+          }
+          #faline{
+
+          }
+
+          .faculty1{
+            float:left;
+            text-align: center;
+            width: 50%;
+            margin-bottom: 16px;
+            padding: 0 30px;
+
+          }
+
+          @media screen and (max-width: 650px) {
+                  .faculty1 {
+                  width: 100%;
+                  display: block;
+              }
+          }
+
+          .f1list{
+            display: inline;
+            padding: 0 8px;
+  
+          }
+
+
+          #mailblue1:hover{
+            opacity: 0.7;
+          }
+          #linkedindot1:hover{
+            opacity: 0.7;
+          }
+
+          #dowenspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+      
+          }
+
+          .f1name{
+            color: #229954;
+
+
+          }
+          .f1para{
+            padding: 0px 40px 20px 40px;
+            
+          }
+
+          #kbethpic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+
+          #leadertitle{
+            clear: left;
+            text-align: center;
+            color: darkorange;
+            font-weight: normal;
+            font-family: Arial;
+            
+          }
+
+          #faline{
+
+          }
+
+          .leader1{
+            float:left;
+            text-align: center;
+            width: 25%;
+            margin-bottom: 16px;
+            padding: 0 30px;
+
+          }
+
+          @media screen and (max-width: 790px) {
+                  .leader1 {
+                  width: 100%;
+                  display: block;
+              }
+          }
+
+          .l1list{
+            display: inline;
+            padding: 0 8px;
+            
+          }
+
+          .l1name{
+
+            color: #229954;
+          }
+
+          .l1para{
+            
+          }
+
+          #almaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #sravyaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #chandrikaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #sarahspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+
+          .leader2{
+            float:left;
+            text-align: center;
+            min-width: 20%;
+            margin-bottom: 16px;
+            padding: 0 10px;
+
+          }
+
+          @media screen and (max-width: 1200px) {
+                  .leader2 {
+                  width: 100%;
+                  display: block;
+              }
+          }
+
+          #bhavanaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+
+          }
+          #bikspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #haydenspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #joshuaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #nadiaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #nawalspic{
+            
+            
+        
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #noellespic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #praneethaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #shreyaspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #simonspic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #stevespic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          #valeriespic{
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 6px;
+            border-color: #adadad;
+          }
+          
+          .l2name{
+
+            color: #229954;
+          }
+
+          .l2des{
+            
+          }
+         
+           
+          
+          
+          
+          
+          
+
+
+           .footerbox{
+              
+              clear:both;
+          
+              background-color: black;
+              text-align: center;
+          }
+
+          .social{
+            position: relative;
+            top: 10px;
+            display: inline;
+            margin-right: 10px;
+            color: white;
+          }
+          .social:hover{
+            opacity: 0.7;
+          }
+               #attribution{
+            padding-top: 10px;
+            font-size: 8px;
+            color: gray;
+          }
+          
+         
+    </style>
+</head>
+
+<body>
+
+      
+      <header>
+        <nav>
+            <div class="logo-section">
+                <a class="itslogo" href="index.html"><img src="itslclogo2.png"></a>
+                <button class="hb-button"><i class="fa fa-bars"></i></button>
+            </div>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#aul" style="color:#e06914">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+      </header>
+
+  <br>
+  <br>
+  <br>
+  
+    <h1 id="fatitle"> Faculty Advisors </h1>
+    <hr id="faline">
+
+    <div class ="faculty1">
+      <img id="dowenspic" src="dowens5.png">
+      <h3 class="f1name"> Dawn Owens, PHD </h3>
+      <h4 class="f1des">Clinical Assistant Professor, Information Systems Director</h4>
+      <p class="f1para">Doctor Owens is currently a Clinical Assistant Professor at the University of Texas at Dallas. Additionally, she is the Director for the Undergraduate degree program titled Information Technology and Systems. She is an advocate for AIS and Women In Technology student chapters at the university. Furthermore, her creation of the ITS academy has allowed prospective students to gain valuable insight to the ITS program and resources found at UTD. </p>
+      <ul>
+        <a href ="mailto:dawn.owens@utdallas.edu">
+        <li class="f1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="http://www.linkedin.com/in/owensdawn/">
+        <li class="f1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    
+    <div class="faculty1">
+      <img id="kbethpic" src="kbeth1.jpg">
+      <h3 class="f1name"> Beth Kent </h3>
+      <h4 class="f1des"> ITS Program Manager </h4>
+      <p class="f1para"> Ms. Kent serves a program manager for the ITS program at the University of Texas at Dallas. She aides Doctor Owens in helping ITS students be aware of the resources provided at the university. </p>
+      <ul>
+        <a href ="mailto:bxk162230@utdallas.edu">
+        <li class="f1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="http://www.linkedin.com/in/bethkent">
+        <li class="f1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+
+    <h1 id="leadertitle">Executive Leaders </h1>
+    <hr id="faline">
+
+    <div class ="leader1">
+      <img id="almaspic" src="alma1.jpg">
+      <h3 class="l1name"> Alma Semock </h3>
+      
+        <ul>
+        <a href ="mailto:alma.semock@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/almasemock/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader1">
+      <img id="sravyaspic" src="sravya1.jpg">
+      <h3 class="l1name"> Sravya Vemulapati </h3>
+   
+        <ul>
+        <a href ="mailto:sxv151330@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/sravya-vemulapati-7483ba12a">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader1">
+      <img id="chandrikaspic" src="chandrika1.jpg">
+      <h3 class="l1name"> Chandrika Bodduru </h3>
+  
+        <ul>
+        <a href ="">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader1">
+      <img id="sarahspic" src="sarah1.png">
+      <h3 class="l1name"> Sarah Tse</h3>
+     
+        <ul>
+        <a href ="mailto:sarah.tse@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/sarahhtse/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+
+    <h1 id="leadertitle">Leaders </h1>
+    <hr id="faline">
+
+    <div class ="leader2">
+      <img id="bhavanaspic" src="bhavana1.jpg">
+      <h3 class="l2name"> Bhavana Keepudi</h3>
+      
+        <ul>
+        <a href ="mailto:bhavana.keepudi@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/bhavanakeepudi/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="bikspic" src="bik1.jpg">
+      <h3 class="l2name"> Bik Pokhrel</h3>
+      
+        <ul>
+        <a href ="mailto:bikalpa.pokhrel@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/bikalpa-pokhrel/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="haydenspic" src="hayden1.jpg">
+      <h3 class="l2name"> Hayden Reid</h3>
+      
+        <ul>
+        <a href ="mailto:hayden.reid@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/hayden-reid-bb1ab2127/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="joshuaspic" src="joshua1.jpg">
+      <h3 class="l2name"> Joshua Banh</h3>
+     
+        <ul>
+        <a href ="mailto:joshua.banh@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/joshua-banh/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="nadiaspic" src="nadia1.jpg">
+      <h3 class="l2name"> Nadia Rahman</h3>
+ 
+        <ul>
+        <a href ="mailto:nxr160430@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/nadrahman/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="nawalspic" src="nawal1.jpg">
+      <h3 class="l2name"> Nawal A</h3>
+      
+        <ul>
+        <a href ="mailto:nawal.ahmed@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/nawalahmed/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="noellespic" src="noelle1.jpg">
+      <h3 class="l2name"> Noelle Rivera</h3>
+ 
+        <ul>
+        <a href ="mailto:noelle.rivera@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/noelle-rivera/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="praneethaspic" src="praneetha1.jpg">
+      <h3 class="l2name"> Praneetha Pratapa</h3>
+     
+        <ul>
+        <a href ="mailto:praneetha.pratapa@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/praneethapratapa/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="shreyaspic" src="shreyas1.jpg">
+      <h3 class="l2name"> Shreyas Tandulwadikar</h3>
+  
+        <ul>
+        <a href ="mailto:shreyas.tandulwadikar@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/shreyas-tandulwadikar-122566149/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="simonspic" src="simon1.jpg">
+      <h3 class="l2name"> Simon Omogah</h3>
+     
+        <ul>
+        <a href ="mailto:simon.omogah@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/somogah/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2 ">
+      <img id="stevespic" src="steve1.jpg">
+      <h3 class="l2name"> Steve John</h3>
+    
+        <ul>
+        <a href ="mailto:steve.john@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/stevejohnutd/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+    <div class ="leader2">
+      <img id="valeriespic" src="valerie1.jpg">
+      <h3 class="l2name"> Valerie Wijeweera</h3>
+      
+        <ul>
+        <a href ="mailto:valerie.wijeweera@utdallas.edu">
+        <li class="l1list"><img id="mailblue1" src="mailblue1.png"></li>
+        </a>
+        
+        <a href="https://www.linkedin.com/in/valeriewijeweera/">
+        <li class="l1list"><img id="linkedindot1" src="lb1.png"></li>
+        </a>
+      </ul>
+    </div>
+
+<footer>
+    <div class="footerbox">
+      <ul>
+        <a href="https://www.facebook.com/itslc.utd/">
+        <li class="social"><img src="facebook.png"></li>
+        </a>
+        <a href="https://www.youtube.com/channel/UCoUw4cCn3EFg2RIQKJt8aSA">
+        <li class="social"><img src="youtube.png"></li>
+        </a>
+        <a href="https://twitter.com/jindal_utdallas">
+        <li class="social"><img src="twitter.png"></li>
+        </a>
+      </ul>
+      <p id="attribution">Icon made by Freepik from www.flaticon.com </p>
+
+    </div>
+
+  </footer>
+
+
+
+
+  <!-- script -->
+ 
+  
+ 
+</body>
+</html>
+  
